@@ -20,6 +20,6 @@ const App = ({store}) => {
 export default App;
 
 
-// {authRoutes({notFoundComponent: NotFound})}
+// {authRoutes({notFoundComponent: NotFound})}  
 // <Route component={NotFound} />
 // <PrivateRoute exact path="/products" component={Products} />
