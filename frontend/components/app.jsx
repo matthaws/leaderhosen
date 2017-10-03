@@ -1,25 +1,17 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-import {Router, Route, Switch} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
-import {initReactDevise, authRoutes, PrivateRoute} from 'react-devise';
-import Home from './home';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Header from './layout/header';
 
-const App = ({store}) => {
-  return (
-    <Provider store={store} >
-      <Router history={createBrowserHistory()}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
-    </Provider>
-  );
-}
+const App = () => (
+  <div>
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Welcome} />
+      <AuthRoute exact path="/login" component={SessionFormContainer} />
+      <AuthRoute exact path="/signup" component={SessionFormContainer} />
+    </Switch>
+  </div>
+);
 
 export default App;
-
-
-// {authRoutes({notFoundComponent: NotFound})}  
-// <Route component={NotFound} />
-// <PrivateRoute exact path="/products" component={Products} />
