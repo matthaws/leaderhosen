@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <ul>
         <li></li>
-        <li>Leaderhosen</li>
+        <li id="logo">Leaderhosen</li>
         <li>Profile</li>
       </ul>
     </header>

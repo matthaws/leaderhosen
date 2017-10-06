@@ -1,0 +1,24 @@
+$light-green:  #818c3c;
+$green: #25591f;
+$dark-green: #19270d;
+$light-brown: #72601b;
+$brown: #593a0e;
+$german-font: 'Germania One', cursive;
+
+body {
+  background-color: $light-green;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px groove $brown;
+  align-items: center;
+  height: 60px;
+}
+
+#logo {
+  font-size: 40px;
+  color: $brown;
+  font-family: $german-font;
+}
