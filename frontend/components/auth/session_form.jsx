@@ -47,31 +47,37 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            Please {this.props.formType} or {this.navLink()}
+            <h3>Please {this.props.formType} or {this.navLink()}</h3>
             {this.renderErrors()}
-            <div className="login-form">
-              <br/>
-              <label>Email:
-                <input type="text"
+            <div className="auth-group">
+              <input type="text"
+                  required
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
                 />
-              </label>
-              <br/>
-              <label>Password:
+              <span class="highlight" />
+              <span class="bar" />
+              <label>Email</label>
+            </div>
+            <div class="auth-group">
                 <input type="password"
+                  required
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                 />
-              </label>
-              <br/>
-              <input type="submit" value="Submit" />
+                <span class="highlight" />
+                <span class="bar" />
+                <label>Password</label>
             </div>
-
-            <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+            <input type="submit" value="Submit" />
+            <h3>or</h3>
+            <br></br>
           </form>
+          <div className="facebook">
+            <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+          </div>
         </div>
     )
   }
