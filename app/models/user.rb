@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
+  after_initialize :ensure_session_token
+
   def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
+    user = User.find_by(email: email)
     return nil unless user
     user.is_password?(password) ? user : nil
   end
@@ -57,6 +59,6 @@ class User < ActiveRecord::Base
     while User.find_by(session_token: self.session_token)
       self.session_token = new_session_token
     end
-  end 
+  end
 
 end

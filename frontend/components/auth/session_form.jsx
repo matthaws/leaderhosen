@@ -8,6 +8,9 @@ class SessionForm extends React.Component {
       email: '',
       password: ''
     };
+
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -52,23 +55,23 @@ class SessionForm extends React.Component {
             <div className="auth-group">
               <input type="text"
                   required
-                  value={this.state.username}
-                  onChange={this.update('username')}
+                  value={this.state.email}
+                  onChange={this.update('email')}
                   className="login-input"
                 />
-              <span class="highlight" />
-              <span class="bar" />
+              <span className="highlight" />
+              <span className="bar" />
               <label>Email</label>
             </div>
-            <div class="auth-group">
+            <div className="auth-group">
                 <input type="password"
                   required
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                 />
-                <span class="highlight" />
-                <span class="bar" />
+              <span className="highlight" />
+                <span className="bar" />
                 <label>Password</label>
             </div>
             <input type="submit" value="Submit" />
