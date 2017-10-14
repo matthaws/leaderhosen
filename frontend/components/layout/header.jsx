@@ -9,7 +9,7 @@ const Header = (props) => {
   if (props.currentUser.email) {
     profile = <button onClick={props.logout}>Log Out</button>
   } else {
-    profile = (<Link to='/login'>Login!</Link>);
+    profile = (<Link className='button' to='/login'>LOGIN</Link>);
   }
 
   return (

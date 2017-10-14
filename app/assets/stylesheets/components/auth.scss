@@ -13,16 +13,15 @@
   margin: 40px auto;
   color: #593a0e;
   display: relative;
+  input[type="submit"] {
+    background: #593a0e;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    margin-left: 45px;
+  }
 }
 
-.login-form-box input[type="submit"] {
-  background: #593a0e;
-  border-radius: 4px;
-  color: white;
-  padding: 10px;
-  margin-left: 45px;
-
-}
 
 .facebook {
   height: 100px;
@@ -44,27 +43,31 @@
   width: 300px;
   border: none;
   border-bottom: 1px solid #593a0e;
-}
 
-.login-input:focus {
-  outline:none;
-}
+  label {
+    color: #593a0e;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+  }
 
-.login-form label {
-  color: #593a0e;
-  font-size: 12px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
+  :focus {
+    outline:none;
+  }
 }
 
 .login-input:focus ~ label, input:valid ~ label {
   top: -20px;
   font-weight: bold;
   color: #593a0e;
+}
+
+.errors {
+  text-align: center; 
 }
 
 /* BOTTOM BARS ================================= */

@@ -2,9 +2,16 @@ body {
   background-color: $brown;
 }
 
-h3 {
-  text-align: center;
+h1, h2, h3 {
   font-family: $german-font;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
   font-size: 18px;
   padding: 20px;
 }
@@ -12,4 +19,11 @@ h3 {
 a {
   color: $light-green;
   text-decoration: underline;
+}
+
+.button {
+  color: $brown;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
 }

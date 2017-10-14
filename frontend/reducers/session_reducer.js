@@ -13,14 +13,15 @@ const defaultState = Object.freeze({
 
 const SessionReducer = (state = defaultState, action) => {
   Object.freeze(state);
+  let newState;
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      let newState = merge({}, state);
+      newState = merge({}, state);
       newState.currentUser = action.currentUser;
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, state, errors);
+      return merge({}, state, {errors});
     case CLEAR_ERRORS:
       return merge({}, state, {errors: [] });
     default:
