@@ -29,8 +29,29 @@ a {
   text-decoration: underline;
 }
 
+.welcomeBox {
+  color: $brown;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 400px;
+  margin: 200px auto;
+  background-color: white;
+}
+
+.welcomeBox h1 {
+  font-size: 30px;
+  font-family: $german-font;
+  margin: 50px;
+}
+
+.welcomeBox p {
+  margin: 50px;
+}
+
 #logo {
   font-size: 40px;
   color: white;
   font-family: $german-font;
+  margin-left: 40px;
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
 
 
 const Header = (props) => {
   let profile;
-  if (props.currentUser) {
-    profile = props.currentUser;
+  if (props.currentUser.email) {
+    profile = <button onClick={props.logout}>Log Out</button>
   } else {
     profile = (<Link to='/login'>Login!</Link>);
   }
@@ -28,4 +29,10 @@ const mapStateToProps = ({ session }) => {
   };
 };
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () => dispatch(logout())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

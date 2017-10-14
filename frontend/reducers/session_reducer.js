@@ -6,18 +6,18 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
-const nullUser = Object.freeze({
-  currentUser: null,
+const defaultState = Object.freeze({
+  currentUser: {},
   errors: []
 });
 
-const SessionReducer = (state = nullUser, action) => {
+const SessionReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      debugger
-      const currentUser = action.currentUser;
-      return merge({}, state, currentUser);
+      let newState = merge({}, state);
+      newState.currentUser = action.currentUser;
+      return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, state, errors);

@@ -1,8 +1,10 @@
-  {
+{
   "name": "Leaderhosen",
   "private": true,
   "babel": {
-    "plugins": ["transform-object-rest-spread"]
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -14,6 +16,7 @@
     "react": "^16.0.0",
     "react-devise": "0.0.18",
     "react-dom": "^16.0.0",
+    "react-jss": "^7.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
