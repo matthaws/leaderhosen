@@ -3,12 +3,15 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_CURRENT_USER,
   RECEIVE_ERRORS,
-  CLEAR_ERRORS
+  CLEAR_ERRORS,
+  OPEN_DROPDOWN,
+  CLOSE_DROPDOWN
 } from '../actions/session_actions';
 
 const defaultState = Object.freeze({
   currentUser: {},
-  errors: []
+  errors: [],
+  dropdownOpen: false
 });
 
 const SessionReducer = (state = defaultState, action) => {
@@ -24,6 +27,14 @@ const SessionReducer = (state = defaultState, action) => {
       return merge({}, state, {errors});
     case CLEAR_ERRORS:
       return merge({}, state, {errors: [] });
+    case OPEN_DROPDOWN:
+      newState = merge({}, state);
+      newState.dropdownOpen = true;
+      return newState;
+    case CLOSE_DROPDOWN:
+      newState = merge({}, state);
+      newState.dropdownOpen = false;
+      return newState;
     default:
       return state;
   }

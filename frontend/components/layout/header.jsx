@@ -1,15 +1,21 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-
+import { logout, openDropdown } from '../../actions/session_actions';
+import DropDown from './dropdown';
 
 const Header = (props) => {
   let profile;
   if (props.currentUser.email) {
-    profile = <button onClick={props.logout}>Log Out</button>
+    profile = (<button onClick={props.openDropdown}>Image</button>)
   } else {
     profile = (<Link className='button' to='/login'>LOGIN</Link>);
+  }
+
+  let dropdown = null;
+
+  if (props.dropdownOpen) {
+    dropdown = <DropDown logout={props.logout} />
   }
 
   return (
@@ -19,18 +25,21 @@ const Header = (props) => {
         <li id="logo">Leaderhosen</li>
         <li>{profile}</li>
       </ul>
+      {dropdown}
     </header>
   )
 };
 
 const mapStateToProps = ({ session }) => {
   return {
-    currentUser: session.currentUser
+    currentUser: session.currentUser,
+    dropdownOpen: session.dropdownOpen
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    openDropdown: () => dispatch(openDropdown()),
     logout: () => dispatch(logout())
   }
 }
