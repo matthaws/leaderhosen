@@ -11,27 +11,39 @@ header {
 }
 
 .welcomeBox {
-  color: $brown;
+  position: relative;
+  background-image: image_url('welcome.jpg');
+  width: 100%;
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   text-align: center;
-  border: 1px solid white;
-  border-radius: 3px;
-  width: 400px;
-  margin: 200px auto;
-  background-color: white;
+  align-items: center;
+  align-content: center;
+}
 
-  h1 {
-    margin: 50px;
-  }
+.welcomeTextBox {
+  position: absolute;
+  left: 220px;
+  top: 100px;
+  background-color: $brown;
+  border-radius: 20px;
+  z-index: 5;
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+}
 
-  p {
-    margin: 50px;
-  }
-
+.welcomeContent {
+  min-height: 2000px;
 }
 
 #logo {
   font-size: 40px;
-  color: white;
+  color: $brown;
   font-family: $german-font;
   margin-left: 40px;
 }
