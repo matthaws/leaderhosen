@@ -3,7 +3,8 @@ header {
   ul {
     display: flex;
     justify-content: space-around;
-    border-bottom: 3px groove white;
+    border-bottom: 3px solid $light-brown;
+    margin-bottom: 5px;
     align-items: center;
     height: 60px;
   }
@@ -13,7 +14,8 @@ header {
 .welcomeBox {
   position: relative;
   background-image: image_url('welcome.jpg');
-  width: 100%;
+  width: 76%;
+  margin: 0 auto;
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -23,12 +25,16 @@ header {
   text-align: center;
   align-items: center;
   align-content: center;
+  border: 8px double $light-brown;
 }
 
 .welcomeTextBox {
   position: absolute;
-  left: 220px;
-  top: 100px;
+  top: 140px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   background-color: $brown;
   border-radius: 20px;
   z-index: 5;
@@ -43,9 +49,13 @@ header {
 
 #logo {
   font-size: 40px;
-  color: $brown;
   font-family: $german-font;
   margin-left: 40px;
+
+  a {
+    color: $brown;
+
+  }
 }
 
 .dropdown {

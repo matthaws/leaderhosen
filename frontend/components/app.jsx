@@ -11,12 +11,11 @@ const App = (props) => (
   <div>
     <Header />
     <div className="background" onClick={props.closeDropdown}>
-    <Switch>
       <Route exact path="/welcome" component={ Welcome } />
       <AuthRoute exact path="/login" component={ SessionFormContainer } />
       <AuthRoute exact path="/signup" component={ SessionFormContainer } />
       <ProtectedRoute exact path="/" component={ Welcome } />
-    </Switch>
+
 
     </div>
   </div>

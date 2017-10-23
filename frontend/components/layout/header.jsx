@@ -22,7 +22,7 @@ const Header = (props) => {
     <header>
       <ul>
         <li></li>
-        <li id="logo">Leaderhosen</li>
+        <li id="logo"><Link to='/'>Leaderhosen</Link></li>
         <li>{profile}</li>
       </ul>
       {dropdown}
@@ -44,4 +44,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

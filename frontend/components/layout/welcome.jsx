@@ -9,6 +9,10 @@ const Welcome = () => {
           <p>Keep score with your friends</p>
         </div>
       </div>
+
+      <div className='intro'>
+        <h1></h1>
+      </div>
     </main>
   );
 }
