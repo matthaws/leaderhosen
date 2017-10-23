@@ -11,9 +11,9 @@ header {
 
 }
 
-.welcomeBox {
+.welcomeContent > div {
   position: relative;
-  background-image: image_url('welcome.jpg');
+
   width: 76%;
   margin: 0 auto;
   min-height: 400px;
@@ -28,7 +28,15 @@ header {
   border: 8px double $light-brown;
 }
 
-.welcomeTextBox {
+.welcomeBox {
+  background-image: image_url('welcome.jpg');
+}
+
+.introBox {
+  background-image: image_url('intro.jpeg');
+}
+
+.welcomeTextBox, .introTextBox {
   position: absolute;
   top: 140px;
   left: 0;
@@ -44,7 +52,10 @@ header {
 }
 
 .welcomeContent {
-  min-height: 2000px;
+  min-height: 1250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #logo {

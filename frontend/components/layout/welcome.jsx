@@ -10,8 +10,15 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className='intro'>
-        <h1></h1>
+      <div className='introBox'>
+        <div className='introTextBox'>
+          <h1>What is Leaderhosen?</h1>
+          <ul>
+            <li>Create a group of friends who play games together.</li>
+            <li>Compare stats and score history for ultimate bragging rights.</li>
+            <li>Unlock achievements and titles</li>
+          </ul>
+        </div>
       </div>
     </main>
   );
