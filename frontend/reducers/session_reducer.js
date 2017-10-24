@@ -9,7 +9,7 @@ import {
 } from '../actions/session_actions';
 
 const defaultState = Object.freeze({
-  currentUser: {},
+  currentUser: null,
   errors: [],
   dropdownOpen: false
 });

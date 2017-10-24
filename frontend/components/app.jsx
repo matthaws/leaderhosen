@@ -1,8 +1,9 @@
 import React from 'react';
-import { Route, Redirect, Switch, Link } from 'react-router-dom';
+import { Route, Redirect, Switch, Link, withRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Header from './layout/header';
 import Welcome from './layout/welcome';
+import Footer from './layout/footer';
 import SessionFormContainer from './auth/session_form_container';
 import { closeDropdown } from '../actions/session_actions';
 import { connect } from 'react-redux';
@@ -11,13 +12,14 @@ const App = (props) => (
   <div>
     <Header />
     <div className="background" onClick={props.closeDropdown}>
-      <Route exact path="/welcome" component={ Welcome } />
-      <AuthRoute exact path="/login" component={ SessionFormContainer } />
-      <AuthRoute exact path="/signup" component={ SessionFormContainer } />
-      <ProtectedRoute exact path="/" component={ Welcome } />
-
-
+      <Switch>
+        <AuthRoute path="/login" component={ SessionFormContainer } />
+        <AuthRoute path="/signup" component={ SessionFormContainer } />
+        <Route path="/welcome" component={ Welcome } />
+        <ProtectedRoute path="/" component={ Welcome } />
+      </Switch>
     </div>
+    <Footer />
   </div>
 );
 
@@ -25,4 +27,4 @@ const mapDispatchToProps = (dispatch) => ({
   closeDropdown: () => dispatch(closeDropdown())
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));

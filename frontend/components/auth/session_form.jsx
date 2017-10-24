@@ -46,10 +46,11 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
+    const message = this.props.formType === "login" ? "Welcome back" : "Join us!"
     return (
       <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
+            <h1>{message}</h1>
             <h3>Please {this.props.formType} or {this.navLink()}</h3>
             {this.renderErrors()}
             <div className="auth-group">

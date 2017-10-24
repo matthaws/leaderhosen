@@ -6,7 +6,7 @@ import DropDown from './dropdown';
 
 const Header = (props) => {
   let profile;
-  if (props.currentUser.email) {
+  if (props.currentUser) {
     profile = (<button onClick={props.openDropdown}>Image</button>)
   } else {
     profile = (<Link className='button' to='/login'>LOGIN</Link>);

@@ -1,0 +1,47 @@
+
+.welcomeContent > div {
+  position: relative;
+
+  width: 76%;
+  margin: 0 auto;
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  border: 8px double $light-brown;
+}
+
+.welcomeBox {
+  background-image: image_url('welcome.jpg');
+}
+
+.introBox {
+  background-image: image_url('intro.jpeg');
+}
+
+.welcomeTextBox, .introTextBox {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $brown;
+  border-radius: 20px;
+  z-index: 5;
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.welcomeContent {
+  min-height: 1250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

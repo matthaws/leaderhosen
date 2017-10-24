@@ -11,16 +11,19 @@
   border-radius: 40px;
   margin: 40px auto;
   color: #593a0e;
-  display: relative;
+  position: relative;
   input[type="submit"] {
     background: #593a0e;
     border-radius: 4px;
     color: white;
     padding: 10px;
-    margin-left: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
 
 .facebook {
   height: 100px;
