@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+  has_secure_token :api_token
   attr_reader :password
 
   validates :email, :password_digest, :session_token, presence: true

@@ -34,7 +34,8 @@ gem 'binding_of_caller'
 gem 'annotate'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
-
+gem 'graphql'
+gem 'graphiql-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
