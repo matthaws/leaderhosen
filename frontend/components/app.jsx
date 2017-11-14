@@ -19,8 +19,8 @@ const App = (props) => (
         <Route path="/welcome" component={ Welcome } />
         <ProtectedRoute path="/" component={ Dashboard } />
       </Switch>
+      <Footer />
     </div>
-    <Footer />
   </div>
 );
 

@@ -1,9 +1,33 @@
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100%
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: white;
+  min-height: 100%;
 }
 
 .background {
   padding-bottom: 80px;
+  position: relative;
+  padding-bottom: 50px;
+  min-height: 100%;
+  margin: 0;
 }
 
 #root div {

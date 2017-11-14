@@ -76,13 +76,8 @@ class SessionForm extends React.Component {
                 <label>Password</label>
             </div>
             <input type="submit" value="Submit" />
-            <h3>or</h3>
-            <br></br>
-          </form>
-          <div className="facebook">
-            <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
-          </div>
-        </div>
+        </form>
+      </div>
     )
   }
 }
